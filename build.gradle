@@ -1,0 +1,52 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.6'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'com.h2database:h2'
+	implementation 'org.postgresql:postgresql'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	implementation 'org.springframework.boot:spring-boot-devtools'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+	// https://mvnrepository.com/artifact/com.google.api-client/google-api-client
+	implementation 'com.google.api-client:google-api-client:1.25.0'
+
+	// // https://mvnrepository.com/artifact/com.google.apis/google-api-services-youtube
+	implementation 'com.google.apis:google-api-services-youtube:v3-rev212-1.25.0'
+
+	implementation 'com.google.apis:google-api-services-youtubeAnalytics:v1-rev14-1.13.2-beta'
+
+	// // https://mvnrepository.com/artifact/com.google.apis/google-api-services-youtubereporting
+	implementation 'com.google.apis:google-api-services-youtubereporting:v1-rev1-1.20.0'
+
+	// // https://mvnrepository.com/artifact/com.google.oauth-client/google-oauth-client-jetty
+	implementation ("com.google.oauth-client:google-oauth-client-jetty:1.25.0") {
+		exclude group: 'org.mortbay.jetty', module: 'servlet-api'
+	}
+	// // https://mvnrepository.com/artifact/com.google.http-client/google-http-client-jackson2
+	implementation 'com.google.http-client:google-http-client-jackson2:1.25.0'
+
+	// // https://mvnrepository.com/artifact/com.google.collections/google-collections
+	implementation 'com.google.collections:google-collections:1.0'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
