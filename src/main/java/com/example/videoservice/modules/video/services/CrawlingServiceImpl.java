@@ -26,7 +26,7 @@ public class CrawlingServiceImpl implements CrawlingService{
 
     @Override
     public CrawlingEntity get(Long Id){
-        return crawlingRepository.getOne(Id);
+       return crawlingRepository.findById(Id).get();
     }
 
     @Override

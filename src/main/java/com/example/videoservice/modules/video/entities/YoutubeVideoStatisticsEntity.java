@@ -20,11 +20,36 @@ public class YoutubeVideoStatisticsEntity extends BaseEntity{
     private long viewCount;
 
     @Column(name = "favorite_count")
-    private long favorite_count;
+    private long favoriteCount;
 
     @Column(name = "comment_count")
-    private long comment_count;
+    private long commentCount;
 
     @Column(name = "video_id")
     private String videoId;
+
+
+    public void setVideoId(String videoId){
+        this.videoId = videoId;
+    }
+
+    public void setLikeCount(Long likeCount){
+        this.likeCount = likeCount;
+    }
+
+    public void setDislikeCount(Long dislikeCount){
+        this.dislikeCount = dislikeCount;
+    }
+
+    public void setViewCount(Long viewCount){
+         this.viewCount = viewCount;
+    }
+
+    public void setFavoriteCount(Long favoriteCount){
+         this.favoriteCount = favoriteCount;
+    }
+
+    public void setCommentCount(Long commentCount){
+         this.commentCount = commentCount;
+    }
 }

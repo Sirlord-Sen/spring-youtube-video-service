@@ -51,4 +51,52 @@ public class YoutubeVideoEntity extends BaseEntity{
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "video_stat_id",referencedColumnName = "video_id")
     private YoutubeVideoStatisticsEntity videoStatistics;
+
+    public void setKeyword(String keyword){
+        this.keyword = keyword;
+    }
+
+    public void setDescription(String description){
+        this.description = description;
+    }
+
+    public void setPublishedDate(Date publishedDate){
+        this.publishedDate = publishedDate;
+    }
+    
+    public void setVideoId(String videoId){
+        this.videoId = videoId;
+    }
+
+    public void setTitle(String title){
+        this.title = title;
+    }
+
+    public void setThumbnailUrl(String thumbnailUrl){
+        this.thumbnailUrl = thumbnailUrl;
+    }
+
+    public void setChannelInfo(YoutubeChannelEntity channelInfo){
+        this.channelInfo = channelInfo;
+    }
+
+    public void setVideoStatistics (YoutubeVideoStatisticsEntity videoStatistics){
+        this.videoStatistics = videoStatistics;
+    }
+
+    public void setVideoDefinition (String videoDefinition){
+        this.videoDefinition = videoDefinition;
+    }
+
+    public void setVideoCaption (String videoCaption){
+        this.videoCaption = videoCaption;
+    }
+
+    public void setVideoprojection (String videoprojection){
+        this.videoprojection = videoprojection;
+    }
+
+    public void setCountryRestricted (String countryRestricted){
+        this.countryRestricted = countryRestricted;
+    }
 }
