@@ -19,15 +19,4 @@ public class YoutubeChannelEntity extends BaseEntity {
     @Column(name = "subscription_count")
     private long subscriptionCount; 
 
-    public void setName(String name){
-        this.name = name;
-    }
-
-    public void setChannelId(String channelId){
-        this.channelId = channelId;
-    }
-
-    public void setSubscriptionCount(Long subscriptionCount){
-        this.subscriptionCount = subscriptionCount;
-    }
 }

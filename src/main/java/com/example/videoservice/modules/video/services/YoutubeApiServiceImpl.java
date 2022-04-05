@@ -209,13 +209,13 @@ public class YoutubeApiServiceImpl implements YoutubeApiService{
     }
 
 
-    public YoutubeVideoEntity getCoontentDetails(String id, YoutubeVideoEntity youTubeVideo) throws IOException {
+    public YoutubeVideoEntity getContentDetails(String id, YoutubeVideoEntity youTubeVideo) throws IOException {
         YouTube.Videos.List list = youtube.videos().list("contentDetails");
         list.setId(id);
         Video v = list.execute().getItems().get(0);
         youTubeVideo.setVideoDefinition(v.getContentDetails().getDefinition());
         youTubeVideo.setVideoCaption(v.getContentDetails().getCaption());
-        youTubeVideo.setVideoprojection(v.getContentDetails().getProjection());
+        youTubeVideo.setVideoProjection(v.getContentDetails().getProjection());
         youTubeVideo.setCountryRestricted(v.getContentDetails().getCountryRestriction().toPrettyString());
 
         return youTubeVideo;

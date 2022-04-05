@@ -21,24 +21,4 @@ public class CrawlingEntity extends BaseEntity{
 
     @Column(name = "total_count")
     private long totalCount;
-
-    public String getNextPageToken(){
-        return nextPageToken;
-    }
-
-    public Long getTotalCount(){
-        return totalCount;
-    }
-
-    public void setCurrentPageToken(String currentPage){
-        this.currentPageToken = currentPage;
-    }
-
-    public void setSearchKey(String searchKey){
-        this.searchKey = searchKey;
-    }
-
-    public void setNextPageToken(String nextPage){
-        this.nextPageToken = nextPage;
-    }
 }
